@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+
+
+
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    
+    background: url("../img/fondo.jpg") no-repeat center center fixed;
+    
+    background-size: cover;
+    background-color:rgb(179, 177, 177);
+    font-size:30px;
+
+    
+  }
+  .fondo h1{
+    font-size: 18rem;
+    
+      
+ }
+  
+  .logo{
+    width: 50px;
+    height: 50px; 
+    
+   
+    
+  }
+  
+  
+ /*NAV DONDE TENEMOS EL MENU */
+
+ 
+
+ nav{
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  min-height:5vh;
+  background-color: #8a4bbd98;
+  }
+ 
+  
+  
+
+
+  .ham{
+    display:none;
+    background-color:transparent;
+    cursor: pointer;
+    border:none;
+    margin:0;
+    padding:0;
+    }
+    
+    .ham span{
+        Background-color:rgb(117, 5, 89);
+        display:block;
+        height:5px;
+        width: 38px;
+        margin:10px auto;
+        border-radius:2px;    
+    }
+  .enlaces-menu{
+      display:flex;
+      padding:0;
+  }
+  .enlaces-menu li{
+      padding: 0 40px;
+      list-style-type: none;
+      transition: 0.3s;
+  }
+
+  .enlaces-menu li a{
+      text-decoration:none;
+      font-size: 1.8rem;
+      color:#f3f3f3;
+      font-weight:850;
+  }
+
+  .enlaces-menu li:hover{
+      background-color:rgba(78, 8, 90, 0.924);
+  }
+
+
+    
+  .txt{
+    font-size: 1.7rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    align-items: center;
+    Background-color:rgba(83, 203, 250, 0.746);
+    position :relative;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%) translateY(-50%);
+   
+
+
+    }
+
+    
+
+  /*BOTON CONTACTAME*/
+
+  .hero{
+    position: relative;
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    left: 0%;
+    
+    bottom: 0px;
+    top: 100px;
+   
+    
+  }
+ /*COLOR DE BONDO DEL BOTON*/
+  .textos-hero a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    background:rgba(78, 8, 90, 0.883);
+    border-radius: 10px;
+    color: #fff;
+    
+   
+    
+}
+ 
+
+
+
+
+
+
+
+/*BOTON CONTACTAME*/
+
+
+
+
+
+/* DISPOSITIVOS MOVILES */
+
+  @media (max-width:768px) {
+    body{
+
+      overflow: visible;
+      /*overflow:hidden;*/
+    }
+      .ham{
+          display:block;
+          cursor:pointer;
+          position: absolute; 
+          top:15px;
+          right:25px;
+          transition: 0.2s  0.1s; 
+  
+      }
+
+    
+   
+      
+      nav{
+          flex-direction:column;
+          align-items: flex-start;
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
+
+      .logo{
+        padding-left:8px;
+        
+        
+        
+      }
+
+      .enlaces-menu{
+        
+          flex-direction:column;
+          justify-content: space-around;
+          align-items:center;
+          height: 92vh;         
+          margin:0;
+          padding:0; 
+          display:none;
+          opacity:0;
+          transition: opacity 5s ease-out;
+          width:100%;
+      
+         
+      }
+      .enlaces-menu li{
+        text-align:center;
+        width:100%;
+        padding:20px;    
+    }
+  
+}
+
+/* Animaciones */
+  
+@keyframes muestraMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .enlaces-menu.activado{
+      display:flex; 
+      animation: muestraMenu 350ms ease-in-out both;
+  }
+  /*
+
+  .br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+  }
+  
+  .br-2.animado{
+    opacity: 0;
+  }
+  .br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+  }
+
+ .ham.girar:hover{
+     transform:rotate(360deg);
+ }
+ */
+ 
